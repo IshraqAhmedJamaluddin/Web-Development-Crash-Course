@@ -71,9 +71,23 @@ input[type=text] {
 img {
     width: 100%;
 }
+p {
+    line-height: 2em;
+}
 
 
 @media(min-width:700px){
+    .hero-bg {
+        text-align: left;
+    }
+
+    .hero-bg p {
+        margin: 0 0 3em;
+    }
+
+    .hero-bg .top {
+        width: 65%;
+    }
     .authentic {
         display: flex;
         flex-direction: row-reverse;
@@ -84,10 +98,26 @@ img {
     form{
         display: flex;
     }
+    .form-container {
+        margin: 2em 0 0;
+        padding: 2em;
+        border-radius: .5em;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    }
     input[type=submit]{
-        width: 50%;
+        height: fit-content;
+        font-size: 1.1em;
+        margin-left: 1em;
+        margin-top: 2.2em;
+        padding: .7em 0;
+        width: 70%;
     }
     .left{
-        width: 50%
+        width: 70%
+    }
+    .authentic-right {
+        padding: 0 10%;
+        text-align: left;
+        align-self: center;
     }
 }
