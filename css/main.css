@@ -32,9 +32,18 @@ h1 span {
     font-size: 1.4rem;
     text-transform: uppercase;
     display: block;
+    position: relative;
+    z-index: 1;
 }
-h1 {
-    margin: 1.5em 1em 1em 1rem;
+h1 span::before {
+    content: ' ';
+    position: absolute;
+    width: 3em;
+    background: #00BFFF;
+    height: .4em;
+    bottom:0;
+    z-index: -1;
+    margin-left: -.3em;
 }
 .form-container {
     background-color: white;
@@ -47,6 +56,10 @@ label {
 }
 form p {
     color: gray;
+    margin-bottom: 1.5em;
+    font-weight: normal;
+    font-size: .9em;
+    margin-top: .3em;
 }
 input[type=submit] {
     background-color: #f69339;
@@ -57,6 +70,7 @@ input[type=submit] {
     font-size: 1.2rem;
     font-weight: bold;
     width: 100%;
+    cursor: pointer;
 }
 input[type=submit]:hover{
     background-color:#c0732c;
@@ -74,7 +88,20 @@ img {
 p {
     line-height: 2em;
 }
-
+h2 {
+    text-transform: uppercase;
+    position: relative;
+}
+h2::before {
+    content: ' ';
+    position: absolute;
+    width: 8em;
+    background: #00BFFF;
+    height: .4em;
+    bottom:0;
+    z-index: -1;
+    margin-left: -.3em;
+}
 
 @media(min-width:700px){
     .hero-bg {
@@ -82,7 +109,7 @@ p {
     }
 
     .hero-bg p {
-        margin: 0 0 3em;
+        margin: 0 0 1em;
     }
 
     .hero-bg .top {
