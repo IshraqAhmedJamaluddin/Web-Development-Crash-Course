@@ -4,7 +4,7 @@
     color: white;
     background-size: cover;
     font-weight: bold;
-    padding: 1em 0 4em 4em;
+    padding: 2em;
 }
 .top {
     animation: fade 3s;
@@ -110,6 +110,7 @@ h2::before {
 @media(min-width:700px){
     .hero-bg {
         text-align: left;
+        padding: 1em 0 4em 4em;
     }
 
     .hero-bg p {
