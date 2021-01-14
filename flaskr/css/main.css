@@ -37,7 +37,6 @@ h1 span {
     text-transform: uppercase;
     display: block;
     position: relative;
-    z-index: 1;
 }
 h1 span::before {
     content: ' ';
@@ -65,7 +64,7 @@ form p {
     font-size: .9em;
     margin-top: .3em;
 }
-input[type=submit] {
+input[type=button] {
     background-color: #f69339;
     color: white;
     border-radius: 0.5em;
@@ -76,7 +75,7 @@ input[type=submit] {
     width: 100%;
     cursor: pointer;
 }
-input[type=submit]:hover{
+input[type=button]:hover{
     background-color:#c0732c;
 }
 input[type=text] {
@@ -136,7 +135,7 @@ h2::before {
         border-radius: .5em;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
     }
-    input[type=submit]{
+    input[type=button]{
         height: fit-content;
         font-size: 1.1em;
         margin-left: 1em;
@@ -151,5 +150,33 @@ h2::before {
         padding: 0 10%;
         text-align: left;
         align-self: center;
+    }
+}
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.9);
+    z-index: 1;
+    place-content: center;
+    color: white;
+    display: none;
+    opacity: 0;
+}
+.animate-overlay {
+    animation: overlay 3s forwards;
+}
+@keyframes overlay {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
