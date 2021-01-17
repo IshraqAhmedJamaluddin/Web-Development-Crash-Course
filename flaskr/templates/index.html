@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Food</title>
 </head>
 <body>
@@ -20,13 +20,13 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid magnam assumenda cumque placeat nulla fuga inventore doloremque veritatis tempora rem?</p>
             </div>
             <div class="form-container">
-                <form action="">
+                <form action="{{ url_for('search') }}" method="POST">
                     <div class="left">
                         <label for="city">Enter your city:</label>
                         <input type="text" name="city" id="city">
-                        <p>Example: "San Diego"</p>
+                        <p>Example: "Cairo"</p>
                     </div>
-                    <input type="button" value="Find Food Now" onclick="find_city()">
+                    <input type="submit" value="Find Food Now" onclick="find_city()">
                 </form>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <h2>Authentic. Wholesome.</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae repellendus amet temporibus, molestiae repudiandae porro obcaecati dolor possimus saepe quibusdam.</p>
         </div>
-        <img src="images/food.jpg" alt="A bowel with food">
+        <img src="{{ url_for('static', filename='images/food.jpg') }}" alt="A bowel with food">
     </div>
     <script>
     function find_city(){
@@ -45,11 +45,6 @@
             ovelay = document.getElementById("overlay");
             overlay.style.display="grid";
             overlay.classList.add('animate-overlay');
-            fetch(url,{
-
-            })
-            .then ()
-            .catch((error)=>{})
         }
     </script>
 </body>
